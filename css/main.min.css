@@ -26,7 +26,14 @@
     visibility: hidden;
 }
 
-p {
+p span{
+    font-family: 'FuturaMediumC';
+    font-weight: 700;
+    font-size: 60px;
+    letter-spacing: 0;
+}
+
+/* p {
     text-transform: uppercase;
     letter-spacing: 0.5em;
     display: inline-block;
@@ -66,3 +73,4 @@ p {
       background-position: 100% 50%;
     }
   }
+ */
