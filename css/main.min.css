@@ -26,6 +26,19 @@
     visibility: hidden;
 }
 
+p {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
 p span{
     font-family: 'FuturaMediumC';
     font-weight: 700;
