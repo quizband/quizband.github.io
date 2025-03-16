@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Music Band</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Убираем подчеркивание у всех иконок социальных сетей */
+        .social a, .social-mobile a, .social-links a {
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="/">
+                        <picture>
+                            <source srcset="assets/img/logo.avif" type="image/avif">
+                            <img src="assets/img/logo.jpeg" alt="Quiz Music Band Logo">
+                        </picture>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="#home">Головна</a></li>
+                        <li><a href="#about">Про гурт</a></li>
+                        <li><a href="#why-us">Чому Quiz?</a></li>
+                        <li><a href="#gallery">Галерея</a></li>
+                        <li><a href="#services">Послуги</a></li>
+                        <li><a href="#video">Відео</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <a href="https://www.facebook.com/QuizMusicBand/" target="_blank" rel="noopener" class="social__link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/quizmusicband" target="_blank" rel="noopener" class="social__link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/quiz.musicband/" target="_blank" rel="noopener" class="social__link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <button class="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero__video">
+            <video autoplay muted loop playsinline poster="assets/img/bg_header.jpg">
+                <source src="assets/video/monatik.webm" type="video/webm">
+                <source src="assets/video/monatik.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero__content">
+            <h2>cover band</h2>
+            <h1>quiz music band</h1>
+            <div class="hero__buttons">
+                <a href="#about" class="btn">Про гурт</a>
+                <a href="#contacts" class="btn btn--outline">Контакти</a>
+            </div>
+            <div class="scroll-down">
+                <a href="#about" class="scroll-down__link">
+                    <span class="scroll-down__arrow"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Про гурт</h2>
+            <div class="about__text">
+                <p>Quiz music band – це відмінний кавер-бенд музичний проект, який не має постійного складу стилістичних «рамок». Бенд брав участь у різних фестивалях дав безліч концертів на різних майданчиках України і Китаю! Гурт виконує композиції в різних стилях на 4 мовах: від легкого блюзу до ритмічного рок'н'ролу, від сонячного реггі до яскравого поп-року, від запальної ламбади до важкого альтернативного року!</p>
+                <a href="#contacts" class="btn">Зателефонувати нам</a>
+            </div>
+            <div class="members-grid">
+                <div class="member fade-up delay-1">
+                    <picture>
+                        <source srcset="assets/img/about/Шаповалова Анастасія.avif" type="image/avif">
+                        <img src="assets/img/about/Шаповалова Анастасія.jpg" alt="Шаповалова Анастасія">
+                    </picture>
+                    <div class="member-info">
+                        <h3>Шаповалова Анастасія</h3>
+                        <p>вокал</p>
+                    </div>
+                </div>
+                <div class="member fade-up delay-2">
+                    <picture>
+                        <source srcset="assets/img/about/Вартанов Вартан.avif" type="image/avif">
+                        <img src="assets/img/about/Вартанов Вартан.jpg" alt="Вартанов Вартан">
+                    </picture>
+                    <div class="member-info">
+                        <h3>Вартанов Вартан</h3>
+                        <p>гітара</p>
+                    </div>
+                </div>
+                <div class="member fade-up delay-3">
+                    <picture>
+                        <source srcset="assets/img/about/Рагуля Дмитро.avif" type="image/avif">
+                        <img src="assets/img/about/Рагуля Дмитро.jpg" alt="Рагуля Дмитро">
+                    </picture>
+                    <div class="member-info">
+                        <h3>Рагуля Дмитро</h3>
+                        <p>клавіші / вокал</p>
+                    </div>
+                </div>
+                <div class="member fade-up delay-4">
+                    <picture>
+                        <source srcset="assets/img/about/Самофалов Михайло.avif" type="image/avif">
+                        <img src="assets/img/about/Самофалов Михайло.jpg" alt="Самофалов Михайло">
+                    </picture>
+                    <div class="member-info">
+                        <h3>Самофалов Михайло</h3>
+                        <p>бас-гітара</p>
+                    </div>
+                </div>
+                <div class="member fade-up delay-5">
+                    <picture>
+                        <source srcset="assets/img/about/Дашкевич Сергій.avif" type="image/avif">
+                        <img src="assets/img/about/Дашкевич Сергій.jpg" alt="Дашкевич Сергій">
+                    </picture>
+                    <div class="member-info">
+                        <h3>Дашкевич Сергій</h3>
+                        <p>ударні</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <h2 class="section-title">Чому Quiz Music Band?</h2>
+            <div class="features-grid">
+                <div class="feature fade-right delay-1">
+                    <i class="fas fa-microphone"></i>
+                    <h3>Чудовий жіночий і чоловічий вокал</h3>
+                </div>
+                <div class="feature fade-up delay-2">
+                    <i class="fas fa-music"></i>
+                    <h3>100% живий звук – без фонограм і плейбеку</h3>
+                </div>
+                <div class="feature fade-left delay-3">
+                    <i class="fas fa-list"></i>
+                    <h3>Широкий репертуар зі світових і українських хітів</h3>
+                </div>
+                <div class="feature fade-up delay-4">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Гнучкі ціни під будь-який формат вашого заходу</h3>
+                </div>
+                <div class="feature fade-up delay-5">
+                    <i class="fas fa-truck"></i>
+                    <h3>Своя апаратура і транспорт</h3>
+                </div>
+                <div class="feature fade-up delay-6">
+                    <i class="fas fa-star"></i>
+                    <h3>Драйв, емоції та енергетика справжнього концерту</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Галерея</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in delay-1">
+                <picture>
+                    <source srcset="assets/img/gallery/min/2.avif" type="image/avif">
+                    <img src="assets/img/gallery/min/2.jpg" alt="Quiz Music Band фото 2">
+                </picture>
+                <div class="gallery-overlay">
+                    <span>Переглянути</span>
+                </div>
+            </div>
+            <div class="gallery-item fade-in delay-2">
+                <picture>
+                    <source srcset="assets/img/gallery/min/3.avif" type="image/avif">
+                    <img src="assets/img/gallery/min/3.jpg" alt="Quiz Music Band фото 3">
+                </picture>
+                <div class="gallery-overlay">
+                    <span>Переглянути</span>
+                </div>
+            </div>
+            <div class="gallery-item fade-in delay-3">
+                <picture>
+                    <source srcset="assets/img/gallery/min/4.avif" type="image/avif">
+                    <img src="assets/img/gallery/min/4.jpg" alt="Quiz Music Band фото 4">
+                </picture>
+                <div class="gallery-overlay">
+                    <span>Переглянути</span>
+                </div>
+            </div>
+            <div class="gallery-item fade-in delay-4">
+                <picture>
+                    <source srcset="assets/img/gallery/min/5.avif" type="image/avif">
+                    <img src="assets/img/gallery/min/5.jpg" alt="Quiz Music Band фото 5">
+                </picture>
+                <div class="gallery-overlay">
+                    <span>Переглянути</span>
+                </div>
+            </div>
+            <div class="gallery-item fade-in delay-5">
+                <picture>
+                    <source srcset="assets/img/gallery/min/6.avif" type="image/avif">
+                    <img src="assets/img/gallery/min/6.jpg" alt="Quiz Music Band фото 6">
+                </picture>
+                <div class="gallery-overlay">
+                    <span>Переглянути</span>
+                </div>
+            </div>
+            <div class="gallery-item fade-in delay-6">
+                <picture>
+                    <source srcset="assets/img/gallery/min/7.avif" type="image/avif">
+                    <img src="assets/img/gallery/min/7.jpg" alt="Quiz Music Band фото 7">
+                </picture>
+                <div class="gallery-overlay">
+                    <span>Переглянути</span>
+                </div>
+            </div>
+            <div class="gallery-item fade-in delay-7">
+                <picture>
+                    <source srcset="assets/img/gallery/min/8.avif" type="image/avif">
+                    <img src="assets/img/gallery/min/8.jpg" alt="Quiz Music Band фото 8">
+                </picture>
+                <div class="gallery-overlay">
+                    <span>Переглянути</span>
+                </div>
+            </div>
+            <div class="gallery-item fade-in delay-8">
+                <picture>
+                    <source srcset="assets/img/gallery/min/9.avif" type="image/avif">
+                    <img src="assets/img/gallery/min/9.jpg" alt="Quiz Music Band фото 9">
+                </picture>
+                <div class="gallery-overlay">
+                    <span>Переглянути</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальне вікно для галереї -->
+        <div class="gallery-modal">
+            <span class="gallery-modal-close">&times;</span>
+            <picture class="gallery-modal-picture">
+                <source id="gallery-modal-avif" type="image/avif">
+                <img class="gallery-modal-content" id="gallery-modal-img">
+            </picture>
+            <div class="gallery-modal-nav">
+                <button class="gallery-modal-prev">&lt;</button>
+                <button class="gallery-modal-next">&gt;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Послуги</h2>
+            <div class="services-grid">
+                <div class="service fade-up delay-1">
+                    <i class="fas fa-ring"></i>
+                    <h3>Весілля</h3>
+                </div>
+                <div class="service fade-up delay-2">
+                    <i class="fas fa-glass-cheers"></i>
+                    <h3>Новий рік</h3>
+                </div>
+                <div class="service fade-up delay-3">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Бенкет</h3>
+                </div>
+                <div class="service fade-up delay-4">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>День народження</h3>
+                </div>
+                <div class="service fade-up delay-5">
+                    <i class="fas fa-cocktail"></i>
+                    <h3>Вечірка</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="repertoire">
+        <div class="container">
+            <h2 class="section-title">У нашому репертуарі</h2>
+            <div class="repertoire-grid">
+                <div class="repertoire-item">
+                    <i class="fas fa-compact-disc"></i>
+                    <h3>Хіти 90-х</h3>
+                </div>
+                <div class="repertoire-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Світові хіти</h3>
+                </div>
+                <div class="repertoire-item">
+                    <i class="fas fa-guitar"></i>
+                    <h3>Рок хіти</h3>
+                </div>
+                <div class="repertoire-item">
+                    <i class="fas fa-music"></i>
+                    <h3>Вітчизняні хіти</h3>
+                </div>
+                <div class="repertoire-item">
+                    <i class="fas fa-glass-martini-alt"></i>
+                    <h3>Лаундж</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video" id="video">
+        <div class="container">
+            <h2 class="section-title">Відео</h2>
+            <div class="video-grid">
+                <div class="video-item fade-right delay-1">
+                    <div class="video-thumbnail" data-video="27YtVxzydFE">
+                        <img src="https://img.youtube.com/vi/27YtVxzydFE/maxresdefault.jpg" alt="Quiz Music Band Відео 1">
+                        <div class="video-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-item fade-left delay-2">
+                    <div class="video-thumbnail" data-video="GYjmNiy1XPc">
+                        <img src="https://img.youtube.com/vi/GYjmNiy1XPc/maxresdefault.jpg" alt="Quiz Music Band Відео 2">
+                        <div class="video-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-item fade-right delay-3">
+                    <div class="video-thumbnail" data-video="G6yGPnIasRM">
+                        <img src="https://img.youtube.com/vi/G6yGPnIasRM/maxresdefault.jpg" alt="Quiz Music Band Відео 3">
+                        <div class="video-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-item fade-left delay-4">
+                    <div class="video-thumbnail" data-video="11X4uiyM3I8">
+                        <img src="https://img.youtube.com/vi/11X4uiyM3I8/maxresdefault.jpg" alt="Quiz Music Band Відео 4">
+                        <div class="video-overlay">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-more">
+                <a href="https://www.youtube.com/user/quizmusicband" target="_blank" rel="noopener" class="btn">Переглянути всі відео</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальне вікно для відео -->
+    <div class="video-modal">
+        <div class="video-modal-content">
+            <span class="video-modal-close">&times;</span>
+            <div class="video-container"></div>
+        </div>
+    </div>
+
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контактна інформація</h2>
+            <div class="contacts-content">
+                <div class="contacts-text">
+                    <p>Замовити групу на свято легко: напишіть або зателефонуйте нам і ми відповімо на всі ваші запитання.</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+380123456789">+38 (012) 345-67-89</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@quizmusicband.com">info@quizmusicband.com</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/QuizMusicBand/" target="_blank" rel="noopener" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/quizmusicband" target="_blank" rel="noopener" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com/quiz.musicband/" target="_blank" rel="noopener" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Copyright Quiz Music Band – всі права захищені</p>
+        </div>
+    </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <a href="#home" class="back-to-top">
+        <span class="back-to-top__arrow"></span>
+    </a>
+
+    <!-- Оверлей для мобильного меню -->
+    <div class="menu-overlay">
+        <nav class="mobile-menu">
+            <ul class="mobile-menu__list">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#about">Про гурт</a></li>
+                <li><a href="#why-us">Чому Quiz?</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#services">Послуги</a></li>
+                <li><a href="#video">Відео</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+            <div class="social-mobile">
+                <a href="https://www.facebook.com/QuizMusicBand/" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/user/quizmusicband" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/quiz.musicband/" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Функция для закрытия видео-модального окна
+        function closeVideoModal() {
+            const videoModal = document.querySelector('.video-modal');
+            if (videoModal) {
+                videoModal.style.display = 'none';
+                // Очищаем содержимое контейнера видео
+                const videoContainer = videoModal.querySelector('.video-container');
+                if (videoContainer) {
+                    videoContainer.innerHTML = '';
+                }
+            }
+        }
+
+        // Инициализация всех функций после загрузки страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
+            setActiveSection();
+            initVideoModal();
+            closeVideoModal(); // Закрываем модальное окно при загрузке
+        });
+    </script>
+</body>
+</html> 
