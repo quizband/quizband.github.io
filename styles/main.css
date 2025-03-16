@@ -1476,7 +1476,7 @@ body {
 }
 
 .back-to-top.visible {
-    opacity: 1;
+    opacity: 0.5;
     visibility: visible;
 }
 
