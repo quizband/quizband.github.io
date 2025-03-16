@@ -1469,7 +1469,7 @@ body {
     justify-content: center;
     text-decoration: none;
     z-index: 99;
-    opacity: 0;
+    opacity: 0.5;
     visibility: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
