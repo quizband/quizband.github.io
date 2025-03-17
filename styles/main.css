@@ -1370,7 +1370,7 @@ body {
 /* Scroll Down Animation */
 .scroll-down {
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1440,9 +1440,9 @@ body {
 
 /* Медиа запросы для стрелки прокрутки */
 @media (max-width: 768px) {
-    .scroll-down {
-        bottom: 15px;
-    }
+    /* .scroll-down {
+        bottom: 40px;
+    } */
     
     .scroll-down__link {
         width: 50px;
@@ -1647,7 +1647,7 @@ body {
     
     .hero__content {
         padding-top: 80px;
-        padding-bottom: 80px;
+        padding-bottom: 105px;
         height: auto;
         min-height: 100vh;
         width: 100%;
