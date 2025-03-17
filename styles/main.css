@@ -1368,7 +1368,7 @@ body {
 }
 
 /* Scroll Down Animation */
-.scroll-down {
+ {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -1379,7 +1379,7 @@ body {
     z-index: 10;
 }
 
-.scroll-down__link {
+__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1395,12 +1395,12 @@ body {
     animation: pulse-bg 2s infinite;
 }
 
-.scroll-down__link:hover {
+__link:hover {
     background-color: var(--accent-secondary);
     transform: translateY(-5px);
 }
 
-.scroll-down__arrow {
+__arrow {
     display: block;
     width: 20px;
     height: 20px;
@@ -1480,9 +1480,9 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* .scroll-down {
-        bottom: 40px;
-    } */
+    .scroll-down {
+        bottom: 60px;
+    }
     
     .scroll-down__link {
         width: 50px;
