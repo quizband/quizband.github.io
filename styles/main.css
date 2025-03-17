@@ -1368,7 +1368,7 @@ body {
 }
 
 /* Scroll Down Animation */
- {
+.scroll-down {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -1379,7 +1379,7 @@ body {
     z-index: 10;
 }
 
-__link {
+.scroll-down__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1395,12 +1395,12 @@ __link {
     animation: pulse-bg 2s infinite;
 }
 
-__link:hover {
+.scroll-down__link:hover {
     background-color: var(--accent-secondary);
     transform: translateY(-5px);
 }
 
-__arrow {
+.scroll-down__arrow {
     display: block;
     width: 20px;
     height: 20px;
@@ -1687,7 +1687,7 @@ __arrow {
     
     .hero__content {
         padding-top: 80px;
-        padding-bottom: 105px;
+        padding-bottom: 125px;
         height: auto;
         min-height: 100vh;
         width: 100%;
