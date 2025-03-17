@@ -1439,6 +1439,46 @@ body {
 }
 
 /* Медиа запросы для стрелки прокрутки */
+@media (min-width: 992px) and (max-width: 1070px) {
+    .nav__list a {
+        font-size: 14px;
+    }
+    .logo img {
+        height: 45px;
+    }
+    .nav__list  {
+        gap: 15px;
+    }
+    .social {
+        gap: 14px;
+    }
+    .social__link {
+        width: 33px;
+        height: 33px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .nav__list a {
+        font-size: 12px;
+    }
+    .logo img {
+        height: 35px;
+    }
+    .nav__list  {
+        gap: 10px;
+    }
+    .social {
+        gap: 10px;
+    }
+    .social__link {
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     /* .scroll-down {
         bottom: 40px;
